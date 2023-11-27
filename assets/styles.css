@@ -1,0 +1,30 @@
+body {
+    margin: 0 auto;
+    background-color: #281f45;
+}
+
+#header {
+    width: 100%;
+    height: 100px;
+    text-align: right;
+    background-color: #635985;
+    color: azure;
+    padding: 0;
+    margin: 0;
+}
+
+#container {
+    background-color: #443C68;
+    width: 100%;
+    height: 800px;
+}
+
+#container2 {
+    background-color: #393053;
+}
+
+#footer {
+    width: 100%;
+    height: 80px;
+    background-color: #18122B;
+}
