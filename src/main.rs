@@ -3,7 +3,9 @@ use yew::prelude::*;
 #[function_component]
 fn Header() -> Html {
     html! {
-        <div id="header">{"header"}</div>
+        <div id="header">
+
+        </div>
     }
 }
 
@@ -17,7 +19,12 @@ fn Footer() -> Html {
 #[function_component]
 fn Container() -> Html {
     html! {
-        <div id="container">{"container"}</div>
+        <div id="container">
+            <div class="box-name">
+                {"name: "}<input type="text" />
+                <input type="button" value="enter" />
+            </div>
+        </div>
     }
 }
 
