@@ -20,7 +20,7 @@ fn Footer() -> Html {
 fn Container() -> Html {
     html! {
         <div id="container">
-            <div class="box-name">
+            <div class="box-name" id="u-name">
                 {"name: "}<input type="text" />
                 <input type="button" value="enter" />
             </div>
