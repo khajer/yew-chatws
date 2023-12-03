@@ -12,7 +12,7 @@ pub fn Header() -> Html {
         let username_state = username_state.clone();
         move |_| {
             log!("click enter");
-            let div: Element = document().get_element_by_id("inputname").unwrap();
+            let div: Element = document().get_element_by_id("input_name").unwrap();
             let value_input = div.dyn_into::<HtmlInputElement>().unwrap().value();
 
             let username_state = username_state.clone();
@@ -26,7 +26,7 @@ pub fn Header() -> Html {
         <div id="header">
         if username_state.to_string().eq(""){
             <div class="box-name" id="u-name">
-                <input type="text" id="inputname" />
+                <input type="text" id="input_name" />
                 <button {onclick}>{"enter"}</button>
             </div>
         }
