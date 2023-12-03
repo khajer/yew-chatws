@@ -11,12 +11,9 @@ pub fn Header() -> Html {
     let onclick = {
         let username_state = username_state.clone();
         move |_| {
-            log!("click enter");
             let div: Element = document().get_element_by_id("input_name").unwrap();
             let value_input = div.dyn_into::<HtmlInputElement>().unwrap().value();
-
             let username_state = username_state.clone();
-
             username_state.set(value_input);
         }
     };
