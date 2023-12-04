@@ -6,7 +6,7 @@ use yew::prelude::*;
 mod components;
 use gloo::console::log;
 
-use components::container::Container;
+use components::container::ContainerComponent;
 use components::footer::Footer;
 use components::header::Header;
 
@@ -31,7 +31,7 @@ pub fn app() -> Html {
     html! {
         <div>
             <Header {on_login}/>
-            <Container username={user_state.username.to_string()}/>
+            <ContainerComponent username={user_state.username.to_string()}/>
             <Footer/>
         </div>
     }

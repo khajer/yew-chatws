@@ -8,6 +8,7 @@ use yew::prelude::*;
 pub struct PropHeaderProp {
     pub on_login: Callback<String>,
 }
+
 #[function_component]
 pub fn Header(prop: &PropHeaderProp) -> Html {
     let username_state = use_state(|| String::from(""));
