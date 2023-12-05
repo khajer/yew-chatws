@@ -1,9 +1,7 @@
-use std::fmt::format;
-use std::ops::Deref;
-
-use web_sys::console::log;
 use yew::prelude::*;
 mod components;
+mod services;
+
 use gloo::console::log;
 
 use components::container::ContainerComponent;
@@ -25,6 +23,7 @@ pub fn app() -> Html {
         Callback::from(move |name: String| {
             log!(format!("name {}", name));
             user_state.set(User { username: name });
+            services::ws_service::connect_websocket();
         })
     };
 
