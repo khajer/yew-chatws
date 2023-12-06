@@ -9,6 +9,11 @@ pub fn connect_websocket() {
     let (mut write, mut read) = ws.split();
     let (in_tx, mut in_rx) = futures::channel::mpsc::channel::<String>(1000);
 
+    let msg = "test";
+    if let Ok(_) = in_tx.clone().try_send(serde_json::to_string(&msg).unwrap()) {
+        log!("message sent successfully");
+    }
+
     spawn_local(async move {
         while let Some(s) = in_rx.next().await {
             log!(format!("got event from channel! {}", s));

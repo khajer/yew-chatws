@@ -87,6 +87,7 @@ dependencies = [
  "futures",
  "gloo 0.6.1",
  "reqwasm",
+ "serde_json",
  "wasm-bindgen",
  "wasm-bindgen-futures",
  "web-sys",

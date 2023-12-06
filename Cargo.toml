@@ -15,3 +15,4 @@ web-sys = { version = "0.3.56", features = ["HtmlInputElement"] }
 reqwasm = "0.4.0"
 futures = "0.3.17"
 wasm-bindgen-futures = "0.4.28"
+serde_json = "1.0.108"
