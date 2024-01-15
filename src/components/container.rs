@@ -18,11 +18,12 @@ impl Component for ContainerComponent {
         Self {}
     }
     fn view(&self, ctx: &Context<Self>) -> Html {
-        log!("xxx>", ctx.props().username.to_string());
+        log!("username : ", ctx.props().username.to_string());
         html! {
             <>
                 <div id="container">
                 {ctx.props().username.to_string()}
+
                 </div>
             </>
         }
