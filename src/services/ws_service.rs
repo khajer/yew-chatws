@@ -24,7 +24,7 @@ pub fn connect_websocket() {
         while let Some(msg) = read.next().await {
             match msg {
                 Ok(Message::Text(data)) => {
-                    log!("from websocket: {}", data);
+                    check_data_input(data);
                 }
                 Ok(Message::Bytes(b)) => {
                     let decoded = std::str::from_utf8(&b);
@@ -39,4 +39,9 @@ pub fn connect_websocket() {
         }
         log!("WebSocket Closed");
     });
+}
+fn check_data_input(data: String) {
+    log!("from websocket: {}", data);
+
+    todo!("parse cmd ");
 }

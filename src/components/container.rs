@@ -1,5 +1,4 @@
 use gloo::console::log;
-// use yew::prelude::*;
 use yew::{html, Component, Context, Html, Properties};
 
 #[derive(Properties, PartialEq)]
@@ -8,7 +7,6 @@ pub struct ContainerProp {
 }
 
 pub struct ContainerComponent {}
-// impl ContainerComponent {}
 
 impl Component for ContainerComponent {
     type Message = ();
